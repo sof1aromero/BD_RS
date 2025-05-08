@@ -57,7 +57,7 @@ IdBarbero int PRIMARY KEY,
     );
    
 create table producto(
- Idproducto int PRIMARY KEY,
+ Idproducto int PRIMARY KEY auto_increment,
  Nombre varchar (30),
  Descripcion varchar (30),
  Precio int,
@@ -76,7 +76,8 @@ create table factura(
     
 create table factura_servicios(
  IdFactura int,
-    IdServicio int
+IdServicio int,
+PRIMARY KEY (IdFactura, IdServicio)
  );
 
 alter table cita

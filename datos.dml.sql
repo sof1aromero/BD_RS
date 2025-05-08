@@ -17,9 +17,13 @@ insert into estado values (1, "disponible"), (2,"ocupado"), (3,"reservado"), (4,
 insert into factura values (1, "2025-10-20 08:30:00", 2000, 1, 1);
 insert into factura_servicio values (1, 1);
 insert into producto values (1, "shampoo", "producto para el cabello", 25000, 1, "Limpieza capilar", 00 );
+insert into producto (Nombre,Descripcion,Precio,Cantidad,Categoria,Imagen) values ("crema de afeitar", "producto para la barba", 20000, 1, "limpieza facial ", 00 );
 insert into rol values (1, "cliente"), (2, "barbero"); 
-insert into servicios values (1,"Corte de cabello", 25000, "50 minutos ",  "cortes de cabello ");
-insert into servicios (Nombre,Precio,Duracion,Categoria) values ("arreglo de barba", 25000, "20 minutos ",  "afeitado y arreglo de barba "), ("lavado de cabello  ", 55000, "1 hora y media",  "tratamiento capilar"),("Trenzas", 25000, "2 horas",  "Peinados femeninos"), ("asesoria de imagen",99000, "2 horas",  "Imagen");
+insert into servicio values (1, "Corte de cabello", 25000, "50 minutos ",  "cortes de cabello");
+insert into servicio (Nombre,Precio,Duracion,Categoria) values ("arreglo de barba", 25000, "20 minutos ",  "afeitado y arreglo de barba "), 
+("lavado de cabello  ", 55000, "1 hora y media",  "tratamiento capilar"),
+("Trenzas", 25000, "2 horas",  "Peinados femeninos"), 
+("asesoria de imagen",99000, "2 horas",  "Imagen");
 
 insert into tipodoc values (1, "CC");
 insert into tipodoc values (2, "TI"), (3, "PASAPORTE"), (4, "CE");
