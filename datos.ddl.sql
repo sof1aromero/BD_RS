@@ -3,12 +3,13 @@ create database sistema_barberia;
 use sistema_barberia;
 
 create table usuario(
-IdUser int PRIMARY KEY,
+Documento int PRIMARY KEY auto_increment,
     Nombre varchar (30),
+    Apellido varchar (30),
     Telefono varchar (10),
     Email varchar(50),
-    Documento int,
-    Contraseña varchar (30)
+    Id_Tipodoc int,
+    Contrasenia varchar (30)
     );
  
   create table tipodoc(
@@ -73,12 +74,17 @@ create table factura(
     IdUser int,
     IdProducto int
     );
-    
+
 create table factura_servicios(
  IdFactura int,
 IdServicio int,
 PRIMARY KEY (IdFactura, IdServicio)
  );
+
+
+alter table usuario 
+add constraint fk_tipodoc
+foreign key (Id_tipodoc) references tipodoc(Idtipodoc);
 
 alter table cita
 add constraint fk_cliente

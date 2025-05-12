@@ -17,7 +17,8 @@ insert into estado values (1, "disponible"), (2,"ocupado"), (3,"reservado"), (4,
 insert into factura values (1, "2025-10-20 08:30:00", 2000, 1, 1);
 insert into factura_servicio values (1, 1);
 insert into producto values (1, "shampoo", "producto para el cabello", 25000, 1, "Limpieza capilar", 00 );
-insert into producto (Nombre,Descripcion,Precio,Cantidad,Categoria,Imagen) values ("crema de afeitar", "producto para la barba", 20000, 1, "limpieza facial ", 00 );
+insert into producto (Nombre,Descripcion,Precio,Cantidad,Categoria,Imagen) values 
+("crema de afeitar", "producto para la barba", 20000, 1, "limpieza facial ", 00 );
 insert into rol values (1, "cliente"), (2, "barbero"); 
 insert into servicio values (1, "Corte de cabello", 25000, "50 minutos ",  "cortes de cabello");
 insert into servicio (Nombre,Precio,Duracion,Categoria) values ("arreglo de barba", 25000, "20 minutos ",  "afeitado y arreglo de barba "), 
@@ -25,9 +26,16 @@ insert into servicio (Nombre,Precio,Duracion,Categoria) values ("arreglo de barb
 ("Trenzas", 25000, "2 horas",  "Peinados femeninos"), 
 ("asesoria de imagen",99000, "2 horas",  "Imagen");
 
+/*Tipos de documentos*/
 insert into tipodoc values (1, "CC");
 insert into tipodoc values (2, "TI"), (3, "PASAPORTE"), (4, "CE");
-insert into usuario values (1, "reyna", "322548552", "reyna@gmail.com", 1103500205, "123");
+
+/*usuarios*/
+insert into usuario values (1103500205, "Reyna", "romero ", "322548552", "reyna@gmail.com", 1, "123");
+insert into usuario values (1258964713, "Samuel", "Ruiz", "3205060072", "samuel@gmail.com", 2, "24565");
+insert into usuario values (1548664713, "Sofia", "Romero", "3201845702", "Sofial@gmail.com", 3, "023545");
+insert into usuario  (Documento, Nombre, Apellido, Telefono, Email, Contrasenia) values  (2258964713, "Samuelito",  "morales","3205060072", "samuel@gmail.com", "24565"), (0258963145, "Solanyi","moreno", "3001060072", "sol@gmail.com", "258963");
+
 
 
 
